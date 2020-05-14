@@ -2,8 +2,8 @@
   "name": "react-native-app-intro-slider",
   "version": "4.0.2",
   "description": "Simple and configurable app introduction slider for react native",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.tsx",
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/jacse/react-native-app-intro-slider",
   "files": [
-    "dist/**/*"
+    "src/**/*"
   ],
   "devDependencies": {
     "@react-native-community/eslint-config": "^1.0.0",
