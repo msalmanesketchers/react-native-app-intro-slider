@@ -28,7 +28,10 @@ type Props<ItemT> = {
   onSlideChange?: (a: number, b: number) => void;
   onSkip?: () => void;
   onDone?: () => void;
-  renderPagination?: (activeIndex: number) => React.ReactNode;
+  renderPagination?: (
+    activeIndex: number,
+    goToSlide?: (pageNum: number, triggerOnSlideChange?: boolean) => void,
+  ) => React.ReactNode;
   activeDotStyle: ViewStyle;
   dotStyle: ViewStyle;
   dotClickEnabled: boolean;
@@ -309,7 +312,7 @@ export default class AppIntroSlider<ItemT> extends React.Component<
           {...otherProps}
         />
         {renderPagination
-          ? renderPagination(this.state.activeIndex)
+          ? renderPagination(this.state.activeIndex, this.goToSlide)
           : this._renderPagination()}
       </View>
     );
